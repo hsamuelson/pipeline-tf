@@ -1,0 +1,11 @@
+prefix=C:/Users/hsamuelson/Anaconda3/envs/tf15/Library
+exec_prefix=C:/Users/hsamuelson/Anaconda3/envs/tf15/Library
+libdir=C:/Users/hsamuelson/Anaconda3/envs/tf15/Library/lib
+includedir=C:/Users/hsamuelson/Anaconda3/envs/tf15/Library/include
+
+Name: Protocol Buffers
+Description: Google's Data Interchange Format
+Version: 3.5.2
+Libs: -L${libdir} -lprotobuf 
+Cflags: -I${includedir} 
+Conflicts: protobuf-lite
