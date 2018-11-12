@@ -12,7 +12,25 @@ from matplotlib import pyplot as plt
 from PIL import Image
 
 import cv2
-cap = cv2.VideoCapture(0)
+
+# handle args from pipe
+#   None or 0 is webcam video 
+#   1 is video from file # file name is arg 2 
+#    is image from file # arg 2 is filename 
+
+
+input1 = sys.argv[0]
+input2 = sys.argv[1]
+cap = 0
+if(input1 is None or input1 == 0):
+  # Assume webcam on zero (first cam)
+  cap = cv2.VideoCapture(0)
+if(input1 == 1):
+  assert input2 is not None
+  cap = cv2.Vide0Capture(input2)
+
+if(cap == 0):
+  assert False
 
 # This is needed since the notebook is stored in the object_detection folder.
 sys.path.append("..")
